@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junaid Alam — Fullstack Developer</title>
+<meta name="description" content="Junaid Alam — Fullstack PHP/Laravel developer building things that work.">
+<link rel="canonical" href="https://junaidalam.freedev.app/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B0E14">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Junaid Alam — Fullstack Developer">
+<meta property="og:description" content="Fullstack PHP/Laravel developer building things that work. Available for work — Pan India.">
+<meta property="og:url" content="https://junaidalam.freedev.app/">
+<meta property="og:site_name" content="Junaid Alam">
+<meta property="og:image" content="https://junaidalam.freedev.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Junaid Alam — Fullstack Developer">
+<meta name="twitter:description" content="Fullstack PHP/Laravel developer building things that work.">
+<meta name="twitter:image" content="https://junaidalam.freedev.app/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Junaid Alam",
+  "url": "https://junaidalam.freedev.app/",
+  "image": "https://junaidalam.freedev.app/photo.webp",
+  "jobTitle": "Fullstack Developer (PHP / Laravel)",
+  "description": "Fullstack PHP/Laravel developer based in Bihar, India, building WordPress, Laravel, and custom web applications.",
+  "knowsAbout": ["PHP", "Laravel", "MySQL", "JavaScript", "WordPress", "REST APIs", "ASP.NET", "C#"],
+  "email": "mailto:junaidamlori@gmail.com",
+  "sameAs": [
+    "https://linkedin.com/in/junaidalam10x",
+    "https://github.com/junaidalam10x",
+    "https://twitter.com/junaidalam10x",
+    "https://instagram.com/junaidalam10x",
+    "https://youtube.com/@junaidalam10x",
+    "https://medium.com/@junaidalam10x"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Bihar",
+    "addressCountry": "IN"
+  },
+  "workLocation": {
+    "@type": "Place",
+    "name": "Pan India (Remote)"
+  }
+}
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0E14;
+    --surface:#12151F;
+    --surface-2:#171B27;
+    --border:#232837;
+    --text:#E8E6E1;
+    --muted:#8B93A7;
+    --accent:#8B8FE0;
+    --accent-dim:#5C5F9E;
+    --amber:#E8A33D;
+    --green:#5FD095;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  ::selection{background:var(--accent-dim);color:#fff;}
+
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.02em;
+  }
+
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* NAV */
+  nav{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(11,14,20,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:960px;
+    margin:0 auto;
+    padding:18px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .logo{
+    font-family:'JetBrains Mono', monospace;
+    font-size:15px;
+    font-weight:600;
+    color:var(--text);
+  }
+  .logo span{color:var(--accent);}
+  .nav-links{
+    display:flex;
+    gap:28px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--muted);
+  }
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-links a:focus-visible{outline:1px solid var(--accent);outline-offset:4px;}
+
+  /* HERO */
+  .hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-top:150px;
+    padding-bottom:90px;
+  }
+  @media (min-width:900px){
+    .hero{ padding-top:180px; padding-bottom:120px; }
+  }
+  .terminal{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--muted);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:16px 20px;
+    max-width:460px;
+    margin-bottom:36px;
+  }
+  .terminal .line{margin-bottom:4px;}
+  .terminal .prompt{color:var(--accent);}
+  .terminal .out{color:var(--text);}
+  .cursor{
+    display:inline-block;
+    width:7px;height:14px;
+    background:var(--accent);
+    margin-left:2px;
+    animation:blink 1s steps(1) infinite;
+    vertical-align:middle;
+  }
+  @keyframes blink{50%{opacity:0;}}
+
+  .hero h1{
+    font-size:clamp(38px, 7vw, 68px);
+    line-height:1.05;
+    margin-bottom:14px;
+  }
+  .hero .tagline{
+    font-size:clamp(16px, 2.2vw, 20px);
+    color:var(--muted);
+    max-width:520px;
+    margin-bottom:28px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--green);
+    border:1px solid var(--border);
+    background:var(--surface);
+    padding:6px 12px;
+    border-radius:20px;
+    width:fit-content;
+    margin-bottom:32px;
+  }
+  .badge .dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 0 3px rgba(95,208,149,0.15);
+  }
+
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    padding:12px 20px;
+    border-radius:6px;
+    border:1px solid var(--border);
+    transition:all .2s;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:#0B0E14;
+    border-color:var(--accent);
+    font-weight:600;
+  }
+  .btn-primary:hover{background:#a3a6ea;}
+  .btn-ghost{color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+  .btn:focus-visible{outline:1px solid var(--accent);outline-offset:3px;}
+
+  /* SECTION HEADERS */
+  .section{padding:100px 0;border-top:1px solid var(--border);}
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--accent);
+    margin-bottom:10px;
+    display:block;
+  }
+  .section h2{font-size:clamp(26px,4vw,34px);margin-bottom:36px;}
+
+  /* ABOUT */
+  .about-grid{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .about-photo{
+    width:200px;
+    height:200px;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    flex-shrink:0;
+  }
+  .about-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .about-text{max-width:640px;color:var(--muted);font-size:16px;}
+  .about-text strong{color:var(--text);font-weight:600;}
+
+  @media (max-width:640px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{width:140px;height:140px;}
+  }
+
+  /* SKILLS */
+  .skill-groups{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+  }
+  .skill-group h3{
+    font-size:13px;
+    font-family:'JetBrains Mono', monospace;
+    color:var(--muted);
+    font-weight:500;
+    margin-bottom:14px;
+    text-transform:lowercase;
+  }
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:6px 12px;
+    border-radius:5px;
+    color:var(--muted);
+  }
+  .chip-core{
+    color:var(--text);
+    border-color:var(--accent-dim);
+    background:rgba(139,143,224,0.08);
+  }
+
+  /* expandable chip */
+  .chip-expand{
+    display:inline-block;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:5px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    vertical-align:top;
+  }
+  .chip-expand summary{
+    cursor:pointer;
+    padding:6px 12px;
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:var(--muted);
+    user-select:none;
+  }
+  .chip-expand summary::-webkit-details-marker{display:none;}
+  .chip-expand summary::after{
+    content:'+';
+    color:var(--accent);
+    font-size:12px;
+    line-height:1;
+  }
+  .chip-expand[open] summary::after{content:'\2212';}
+  .chip-expand[open]{border-color:var(--accent-dim);}
+  .chip-expand[open] summary{color:var(--text);}
+  .chip-expand-panel{
+    padding:2px 10px 10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    max-width:220px;
+  }
+  .sub-chip{
+    font-size:10.5px;
+    color:var(--text);
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    padding:3px 8px;
+    border-radius:4px;
+    white-space:nowrap;
+  }
+
+  /* PROJECTS - changelog style */
+  .changelog{border-left:1px solid var(--border);padding-left:0;}
+  .entry{
+    position:relative;
+    padding:0 0 56px 32px;
+    border-left:1px solid var(--border);
+    margin-left:3px;
+  }
+  .entry:last-child{border-color:transparent;padding-bottom:0;}
+  .entry::before{
+    content:'';
+    position:absolute;
+    left:-5px;top:4px;
+    width:9px;height:9px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--accent);
+  }
+  .entry-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .version{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--accent);
+  }
+  .status-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    padding:2px 8px;
+    border-radius:12px;
+    letter-spacing:0.03em;
+  }
+  .status-live{background:rgba(95,208,149,0.12);color:var(--green);}
+  .status-shipped{background:rgba(232,163,61,0.12);color:var(--amber);}
+  .entry h3{font-size:19px;margin-bottom:8px;}
+  .entry p{color:var(--muted);font-size:14.5px;max-width:560px;margin-bottom:14px;}
+  .stack-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+  .stack-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    border:1px solid var(--border);
+    padding:3px 8px;
+    border-radius:4px;
+  }
+  .entry-link{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--accent);
+    border-bottom:1px solid var(--accent-dim);
+    padding-bottom:1px;
+    transition:opacity .2s;
+  }
+  .entry-link:hover{opacity:0.75;}
+  .entry-link.disabled{
+    color:var(--muted);
+    border-color:var(--border);
+    cursor:default;
+  }
+
+  /* Flip clock mini demo */
+  .flip-demo{
+    display:flex;
+    gap:6px;
+    margin:6px 0 16px;
+  }
+  .flip-unit{
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:5px;
+    padding:8px 10px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:20px;
+    font-weight:600;
+    color:var(--text);
+    min-width:34px;
+    text-align:center;
+  }
+  .flip-sep{
+    display:flex;
+    align-items:center;
+    color:var(--muted);
+    font-family:'JetBrains Mono', monospace;
+    font-size:20px;
+  }
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    max-width:700px;
+  }
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px;
+    transition:border-color .2s;
+  }
+  .contact-card:hover{border-color:var(--accent-dim);}
+  .contact-card .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--muted);
+    margin-bottom:6px;
+    display:block;
+  }
+  .contact-card .value{font-size:15px;font-weight:500;}
+  .contact-card.disabled{opacity:0.45;}
+
+  footer{
+    border-top:1px solid var(--border);
+    padding:28px;
+    text-align:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+
+  @media (max-width:640px){
+    .nav-links{gap:16px;font-size:11px;}
+    .section{padding:70px 0;}
+  }
+</style>
+<noscript>
+<style>.reveal{opacity:1 !important;transform:none !important;}</style>
+</noscript>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">JA<span>.</span></div>
+    <div class="nav-links">
+      <a href="#work">~/work</a>
+      <a href="#about">~/about</a>
+      <a href="#contact">~/contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="terminal">
+    <div class="line"><span class="prompt">$</span> <span class="out">whoami</span></div>
+    <div class="line out">junaid_alam — fullstack developer</div>
+    <div class="line"><span class="prompt">$</span> <span class="out">status</span></div>
+    <div class="line out">available for <span id="typeWord">work</span><span class="cursor"></span></div>
+  </div>
+
+  <h1>Junaid Alam</h1>
+  <p class="tagline">Fullstack developer building things that work — PHP, Laravel, and clean code, shipped without the fluff.</p>
+
+  <div class="badge"><span class="dot"></span> open to work</div>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#contact">Get in touch</a>
+    <a class="btn btn-ghost" href="#work">See the work</a>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap reveal">
+    <span class="section-label">01 — about</span>
+    <h2>Not from a bootcamp. From production.</h2>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="photo.webp" alt="Junaid Alam" width="400" height="400" loading="lazy">
+      </div>
+      <p class="about-text">
+        I'm a PHP/Laravel developer based in Bihar, India, fresh off a BCA from Mangalayatan University (2022–2025).
+        Most of what I know, I learned by shipping — building real sites that real people use, not tutorial projects
+        that sit in a folder. I work across <strong>PHP, MySQL, JavaScript, and REST APIs</strong>, I'm deep into
+        <strong>Laravel</strong> right now, and I build on <strong>WordPress/Elementor</strong> when that's the right
+        tool for the job. I'd rather ship something small and working than something big and half-finished.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap reveal">
+    <span class="section-label">02 — stack</span>
+    <h2>What I build with</h2>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>core stack</h3>
+        <div class="chip-row">
+          <span class="chip chip-core">PHP</span>
+          <span class="chip chip-core">Laravel</span>
+          <span class="chip chip-core">MySQL</span>
+          <span class="chip chip-core">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>frontend & cms</h3>
+        <div class="chip-row">
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">jQuery</span>
+          <span class="chip">Ajax</span>
+          <span class="chip">JSON</span>
+          <span class="chip">Bootstrap</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">WordPress / Elementor</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>also worked with</h3>
+        <div class="chip-row">
+          <span class="chip">C</span>
+          <span class="chip">C++</span>
+          <span class="chip">C#</span>
+          <span class="chip">ASP.NET</span>
+          <span class="chip">MVC (C#)</span>
+          <span class="chip">Entity Framework</span>
+          <span class="chip">MS SQL Server</span>
+          <span class="chip">Python (basic)</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>languages</h3>
+        <div class="chip-row">
+          <span class="chip">Hindi — native</span>
+          <span class="chip">Urdu — native</span>
+          <span class="chip">Bhojpuri — native</span>
+          <details class="chip-expand">
+            <summary>English</summary>
+            <div class="chip-expand-panel">
+              <span class="sub-chip">Reading — strong</span>
+              <span class="sub-chip">Writing — strong</span>
+              <span class="sub-chip">Speaking — improving</span>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>tools & workflow</h3>
+        <div class="chip-row">
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">Postman</span>
+          <span class="chip">Apache</span>
+          <span class="chip">FTP</span>
+          <span class="chip">MS Office (Word/Excel/PPT, 365)</span>
+          <details class="chip-expand">
+            <summary>AI-assisted development</summary>
+            <div class="chip-expand-panel">
+              <span class="sub-chip">ChatGPT</span>
+              <span class="sub-chip">Claude</span>
+              <span class="sub-chip">Gemini</span>
+              <span class="sub-chip">Grok</span>
+              <span class="sub-chip">DeepSeek</span>
+              <span class="sub-chip">Kimi</span>
+              <span class="sub-chip">Copilot</span>
+              <span class="sub-chip">Codex</span>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap reveal">
+    <span class="section-label">03 — work</span>
+    <h2>Recent builds</h2>
+
+    <div class="changelog">
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="version">v1.2.0</span>
+          <span class="status-tag status-live">live</span>
+        </div>
+        <h3>OCTI.IN</h3>
+        <p>A live WordPress/Elementor build — designed, built, and deployed end to end, from layout to launch.</p>
+        <div class="stack-row">
+          <span class="stack-tag">WordPress</span>
+          <span class="stack-tag">Elementor</span>
+        </div>
+        <a class="entry-link" href="https://octi.in" target="_blank" rel="noopener">view live →</a>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="version">v1.0.0</span>
+          <span class="status-tag status-live">live</span>
+        </div>
+        <h3>Franchise Management System</h3>
+        <p>A system for managing franchise operations — built to handle real workflows, not just CRUD demos.</p>
+        <div class="stack-row">
+          <span class="stack-tag">PHP</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag"> HTML/CSS </span>
+        </div>
+          <a class="entry-link" href="https://app.octi.in" target="_blank" rel="noopener">view live →</a>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="version">v1.0.0</span>
+          <span class="status-tag status-shipped">shipped</span>
+        </div>
+        <h3>English Quiz Platform</h3>
+        <p>An interactive quiz platform for practicing English — question flow, scoring, and results handled server-side.</p>
+        <div class="stack-row">
+          <span class="stack-tag">PHP</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">JavaScript</span>
+        </div>
+        <span class="entry-link disabled">link coming soon</span>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="version">v2.0.0</span>
+          <span class="status-tag status-live">live demo below</span>
+        </div>
+        <h3>Flip Clock UI</h3>
+        <p>A personal front-end project — a stylized flip clock, rebuilt from a hand-drawn sketch. Here it is, actually running:</p>
+        <div class="flip-demo" id="flipDemo">
+          <div class="flip-unit" id="fh">00</div>
+          <div class="flip-sep">:</div>
+          <div class="flip-unit" id="fm">00</div>
+          <div class="flip-sep">:</div>
+          <div class="flip-unit" id="fs">00</div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap reveal">
+    <span class="section-label">04 — contact</span>
+    <h2>Let's talk</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:junaidamlori@gmail.com">
+        <span class="label">email</span>
+        <span class="value">junaidamlori@gmail.com</span>
+      </a>
+      <a class="contact-card" href="https://wa.me/918521159292" target="_blank" rel="noopener">
+        <span class="label">whatsapp</span>
+        <span class="value">+91 85211 59292</span>
+      </a>
+      <a class="contact-card" href="https://linkedin.com/in/junaidalam10x" target="_blank" rel="noopener">
+        <span class="label">linkedin</span>
+        <span class="value">/in/junaidalam10x</span>
+      </a>
+      <a class="contact-card" href="https://github.com/junaidalam10x" target="_blank" rel="noopener">
+        <span class="label">github</span>
+        <span class="value">@junaidalam10x</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  built by Junaid Alam — © <span id="year"></span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // scroll reveal — with safety fallback so content is never stuck hidden
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.05, rootMargin: '0px 0px -5% 0px' });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('in'));
+  }
+  // safety net: force everything visible after 2.5s no matter what
+  setTimeout(() => reveals.forEach(el => el.classList.add('in')), 2500);
+
+  // typewriter: "work" <-> "Pan India"
+  const typeEl = document.getElementById('typeWord');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeEl && !reduceMotion) {
+    const words = ['work', 'Pan India'];
+    let wordIndex = 0;
+    const typeSpeed = 90;
+    const deleteSpeed = 55;
+    const holdTime = 1800;
+
+    function typeLoop() {
+      const current = words[wordIndex];
+      let charIndex = typeEl.textContent.length;
+
+      if (charIndex < current.length) {
+        // still typing forward (only used on very first run if needed)
+        typeEl.textContent = current.slice(0, charIndex + 1);
+        setTimeout(typeLoop, typeSpeed);
+        return;
+      }
+
+      // hold, then delete, then move to next word and type it
+      setTimeout(() => {
+        deleteWord(() => {
+          wordIndex = (wordIndex + 1) % words.length;
+          typeWordFn(words[wordIndex], () => setTimeout(typeLoop, 0));
+        });
+      }, holdTime);
+    }
+
+    function deleteWord(done) {
+      const text = typeEl.textContent;
+      if (text.length === 0) { done(); return; }
+      typeEl.textContent = text.slice(0, -1);
+      setTimeout(() => deleteWord(done), deleteSpeed);
+    }
+
+    function typeWordFn(word, done) {
+      let i = 0;
+      function step() {
+        typeEl.textContent = word.slice(0, i + 1);
+        i++;
+        if (i < word.length) setTimeout(step, typeSpeed);
+        else done();
+      }
+      step();
+    }
+
+    // kick off the loop after the initial "work" has been visible for a bit
+    setTimeout(typeLoop, holdTime);
+  }
+
+  // flip clock demo (live time)
+  function pad(n){ return n.toString().padStart(2,'0'); }
+  function tick(){
+    const now = new Date();
+    document.getElementById('fh').textContent = pad(now.getHours());
+    document.getElementById('fm').textContent = pad(now.getMinutes());
+    document.getElementById('fs').textContent = pad(now.getSeconds());
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+
+</body>
+</html>
